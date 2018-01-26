@@ -116,6 +116,154 @@
 	opacity: 1;
 }
 
+.banner__img--custom {
+	position: relative;
+}
+
+.banner__img--custom::after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	content: "";
+	background-color: rgba(52, 58, 64,.4);
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+
+.banner--custom {
+	position: relative;
+}
+
+.banner-wrap--custom {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.feedback {
+	background-color: #eee;	
+}
+
+.feedback__content {
+	position: relative;
+	padding: 25px 15px 15px 15px;
+	border: 1px solid #343a40;
+	border-radius: 3px;
+}
+
+.feedback__content::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: -25px;
+	width: 70px;
+	height: 40px;
+	padding: 0 10px;
+	margin-left: -35px;
+	background-color: #eee;
+	background-image: url(../img/quote.svg);
+	-webkit-background-size: 50px 40px;
+	background-size: 50px 40px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.feedback__img {
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	overflow:hidden;
+}
+
+.feedback__name {
+	display: block;
+}
+
+.announce__content {
+	position: relative;
+	z-index: 10;
+}
+
+.announce__wrap {
+	position: relative;
+	height: 450px;
+	padding: 20px;
+	overflow: hidden;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.announce__wrap::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/spring.jpg);
+	background-position: 50% 60%;
+	z-index: 8;
+}
+
+.announce__wrap--2::before,
+.announce__wrap--4::before {
+	background-image: url(../img/winter.jpg);
+}
+
+.announce__wrap::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(55, 210, 148, 0.5);
+	z-index: 9;
+}
+
+.announce__wrap--2::after {
+	background: rgba(210, 55, 204, 0.5);
+}
+
+.announce__wrap--3::after {
+	background: rgba(224, 211, 38, 0.5);
+}
+
+.announce__wrap--4::after {
+	background: rgba(43, 49, 119, 0.5);
+}
+
+.work,
+.popup--custom {
+	height: 300px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.work__text,
+.popup__text {
+	font-size: 25px;
+}
+
 /*MEDIA CUSTOM*/
 
 @media (max-width: 768px) {
