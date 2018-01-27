@@ -264,6 +264,143 @@
 	font-size: 25px;
 }
 
+.fieldset--custom {
+	padding: 15px 15px 5px 15px;
+	border: 1px solid rgba(52, 58, 64,.7);
+	border-radius: 5px;
+}
+
+.form__subtitle--custom {
+	display: inline-block;
+  width: auto;
+  text-align: center;
+  padding: 0 10px;
+  font-size: 15px;
+  color: #ff304d;
+}
+
+.radio-btn--custom,
+.checkbox--custom {
+	display: none;
+}
+
+.radio-label--custom,
+.checkbox-label--custom {
+	padding-left: 55px;
+	padding-bottom: 25px;
+  cursor: pointer;
+  position: relative;
+}
+
+.radio-label--custom::before {
+	position: absolute;
+  content: " ";
+  top: -5px;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 10px solid #ffffff;
+  box-shadow: 0 0 0 2px #e5e5e5;
+  transition: all 0.2s ease-in-out;
+}
+
+.radio-btn--custom:checked + .radio-label--custom::before {
+	position: absolute;
+  content: " ";
+  top: -5px;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #ff304d;
+  border: 10px solid #ffffff;
+  box-shadow: 0 0 0 2px #ff304d;  
+}
+
+.radio-btn--custom + .radio-label--custom:hover::before,
+.checkbox--custom + .checkbox-label--custom:hover::before {
+ 	box-shadow: 0 0 0 2px #283645;  
+}
+
+.radio-btn--custom:checked + .radio-label--custom:hover::before,
+.checkbox--custom:checked + .checkbox-label--custom::before,
+.checkbox--custom:checked + .checkbox-label--custom:hover::before {
+ 	box-shadow: 0 0 0 2px #ff304d;
+}
+
+.checkbox-label--custom::before {
+	position: absolute;
+  content: " ";
+  top: -7px;
+  left: 0;
+  width: 37px;
+  height: 37px;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 2px #e5e5e5;
+  transition: all 0.2s ease-in-out;
+}
+
+.checkbox--custom:checked + .checkbox-label--custom::after {
+	position: absolute;
+  content: " ";
+  top: 2px;
+  left: 9px;
+  width: 22px;
+  height: 11px;
+  border: 2px solid #ff304d;
+  background-color: #ffffff;
+  border-top-style: none;
+  border-right-style: none;
+  transform: rotate(-45deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.upload__label {
+	position: relative;
+  height: 64px;
+  width: 100%;
+  padding: 15px 0;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  line-height: 30px; 
+}
+
+.upload__btn {
+  position: absolute;
+  top: 0;
+  height: 64px;
+  width: 100%;
+  padding: 15px;
+  margin: 0;
+  text-align: center;  
+  border: 2px solid #ff304d;
+  background-color: #ff304d;
+  border-radius: 5px;
+  color: #fff;
+  transition: all 0.2s ease-in-out; 
+}
+
+.upload__input {
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  height: 64px;
+  width: 100%;
+  margin: 0;
+  border-radius: 5px;  
+  opacity: 0;
+}
+
+.upload__label:hover > .upload__btn {
+	background-color: #fff;
+	border-color: #343a40;
+	color: #343a40;
+}
 /*MEDIA CUSTOM*/
 
 @media (max-width: 768px) {
